@@ -4,7 +4,6 @@ python-multipart
 pymongo
 cloudinary
 pillow
-torch>=2.0.0
-torchvision>=0.15.0
+torch
+torchvision
 numpy
-clip-by-openai

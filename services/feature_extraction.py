@@ -19,7 +19,7 @@ from PIL import Image
 
 # Load Pretrained ResNet-50 Model
 device = "cuda" if torch.cuda.is_available() else "cpu"
-model = models.resnet50(pretrained=True).to(device)
+model = models.resnet50(pretrained=True,weights='IMAGENET1K_V1').to(device)
 model.eval()
 
 # Remove the last fully connected layer
