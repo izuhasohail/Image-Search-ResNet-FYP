@@ -4,7 +4,7 @@ from flask import Flask, request, jsonify
 from flask_cors import CORS
 
 # Ensure required dependencies are installed
-os.system("pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cpu")
+# os.system("pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cpu")
 
 # Import after installation to avoid ImportError
 import torch
