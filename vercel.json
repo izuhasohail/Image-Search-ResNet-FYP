@@ -1,4 +1,7 @@
 {
-    "builds":[{"src":"main.py","use":"@vercel/python"}],
-    "routes":[{"src":"/(.*)","dest":"main.py"}]
+    "builds": [{"src": "main.py", "use": "@vercel/python"}],
+    "routes": [{"src": "/(.*)", "dest": "main.py"}],
+    "scripts": {
+        "postinstall": "pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cpu"
+    }
 }
