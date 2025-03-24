@@ -2,15 +2,6 @@ import os
 import tempfile
 from flask import Flask, request, jsonify
 from flask_cors import CORS
-
-# Ensure required dependencies are installed
-# os.system("pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cpu")
-
-# Import after installation to avoid ImportError
-import torch
-import torchvision.models as models
-import torchvision.transforms as transforms
-from PIL import Image
 from services.db import save_image_data, find_similar_images
 from services.cloudinary import upload_to_cloudinary
 from services.feature_extraction import extract_features
