@@ -7,12 +7,12 @@ from services.cloudinary import upload_to_cloudinary
 from services.feature_extraction import extract_features
 
 app = Flask(__name__)
-CORS(app, resources={r"/*": {"origins": "*"}},supports_credentials=True)  # Allow all origins
+CORS(app, resources={r"/api/*": {"origins": "*"}},supports_credentials=True)  # Allow all origins
 
 
 
 
-@app.route("/search", methods=["POST"])
+@app.route("/api/search", methods=["POST"])
 def search_image():
     file = request.files["file"]
     
@@ -30,7 +30,7 @@ def search_image():
         ]
     })
 
-@app.route("/upload", methods=["POST"])
+@app.route("/api/upload", methods=["POST"])
 def upload_image():
     file = request.files["file"]
     
