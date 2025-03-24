@@ -7,7 +7,10 @@ from services.cloudinary import upload_to_cloudinary
 from services.feature_extraction import extract_features
 
 app = Flask(__name__)
-CORS(app, resources={r"/*": {"origins": "*"}})  # Allow all origins
+CORS(app, resources={r"/*": {"origins": "*"}},supports_credentials=True)  # Allow all origins
+
+
+
 
 @app.route("/search", methods=["POST"])
 def search_image():
