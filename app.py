@@ -10,7 +10,7 @@ import os
 app = Flask(__name__)
 CORS(app, resources={r"/*": {"origins": "*"}})  # ✅ Allow all origins
 
-@app.route("/search/", methods=["POST"])
+@app.route("/search", methods=["POST"])
 def search_image():
     file = request.files["file"]
     
@@ -28,7 +28,7 @@ def search_image():
         ]
     })
 
-@app.route("/upload/", methods=["POST"])
+@app.route("/upload", methods=["POST"])
 def upload_image():
     file = request.files["file"]
     
